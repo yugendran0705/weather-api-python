@@ -1,13 +1,13 @@
-import requests
+import requests #importing requests module
 
 def get_weather_forecast(api_key, city):
-    url = f"http://api.openweathermap.org/data/2.5/forecast?q={city}&limit=5&appid={api_key}"
+    url = f"http://api.openweathermap.org/data/2.5/forecast?q={city}&limit=5&appid={api_key}"  # Get the 5-day weather forecast for the city
     
     try:
-        response = requests.get(url)
-        data = response.json()
+        response = requests.get(url)  # Send a GET request to the API endpoint
+        data = response.json()  # Convert the response data to a JSON object
 
-        print(f"Weather forecast for {city}:")
+        print(f"Weather forecast for {city}:") # Get the city name
 
         forecasts = data["list"][:5]  # Get the first 5 forecasts (3-hour intervals for 5 days)
         for forecast in forecasts:
