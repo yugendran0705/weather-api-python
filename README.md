@@ -1,6 +1,6 @@
 # weather-api-python
  
-#Installation:
+# Installation:
 Run this command:
 
 $ git clone https://github.com/yugendran0705/weather-api-python.git
